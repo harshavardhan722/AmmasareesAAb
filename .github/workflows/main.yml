@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:                                              # ← ADD THIS LINE
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
 
@@ -58,3 +60,4 @@ jobs:
           name: AmmaSarees-Release-AAB
           path: app/build/outputs/bundle/release/app-release.aab
           retention-days: 30
+jobs:
